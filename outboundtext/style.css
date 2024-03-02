@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    zoom: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #010c20;
+    color: rgba(255, 255, 255, 0.605);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza horizontalmente os elementos filhos */
+    min-height: 100vh;
+    /* Garante que o body ocupe a altura total da tela */
+}
+
+textarea,
+#adjustedText {
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #010c20;
+    font-size: large;
+    color: rgba(255, 255, 255, 0.605);
+    width: 98%;
+    padding: 10px;
+    margin: 20px auto;
+    /* Centraliza horizontalmente */
+    border: 1px solid rgba(255, 255, 255, 0.605);
+    border-radius: 10px;
+    resize: none;
+    height: 200px;
+}
+
+#adjustedText {
+    white-space: pre-wrap;
+    /* Mantém a formatação de quebra de linha e espaços */
+    background-color: #010c20;
+    border: 1px solid #010c20;
+    min-height: 200px;
+}
+
+button {
+    position: fixed;
+    bottom: 10px;
+    z-index: 1000;
+    left: 50%;
+    bottom: 70%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.605);
+    color: #010c20;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #84b5ff;
+}
+
+
+.btn-voltar {
+    position: fixed;
+    bottom: 10px;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: #414e68;
+    color: rgba(255, 255, 255, 0.605);
+    border: 2px solid #84b5ff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-voltar:hover {
+    background-color: rgba(0, 87, 179, 0.908);
+}
+
+.pop-up {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0056b3;
+    color: rgba(255, 255, 255, 0.605);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pop-up.active {
+    opacity: 1;
+}

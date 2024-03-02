@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    background-color: #010c20;
+    color: #e0e0e0;
+}
+
+.header {
+    background-color: #010c20;
+    color: rgba(255, 255, 255, 0.605);
+    padding: 12px 0px 0px;
+    text-align: center;
+    font-size: 2.0rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+}
+
+.info-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+}
+
+.feature-btn {
+    background-color: #031e50;
+    color: rgba(255, 255, 255, 0.605);
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    border-radius: 120px;
+    height: 200px;
+    width: calc((80% - 180px) / 3);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Roboto', sans-serif;
+    border: 10px solid #84b5ff;
+}
+
+.feature-btn:hover {
+    background-color: #06348a;
+}
+
+.footer {
+    background-color: #02112e;
+    color: rgba(255, 255, 255, 0.605);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    margin-top: 380px;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .feature-btn {
+        width: calc(100% - 20px);
+        /* Ajuste para ocupar quase toda a largura, considerando o padding */
+        margin: 10px;
+        /* Adiciona um pouco de margem para não tocar as bordas */
+    }
+
+    .info-div {
+        gap: 20px;
+        /* Reduz o gap em telas menores */
+    }
+}
+
+.top-bar {
+    background-color: #02112e;
+    color: rgba(255, 255, 255, 0.605);
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.image-overlay-container {
+    position: fixed;
+    top: 0;
+    right: 1;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+}
+
+.overlay-image {
+    opacity: 0.7;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.image-overlay-container-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+}
+
+.overlay-image-right {
+    opacity: 0.7;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formatador de Leads</title>
+    <link rel="stylesheet" href="formatador.css">
+</head>
+
+<body>
+    <!-- Botão para Voltar à Homepage, colocado no início para fácil posicionamento -->
+    <a href="../index.html" class="btn-voltar">Voltar à Homepage</a>
+
+    <div class="container">
+        <textarea id="inputText" class="textarea"></textarea>
+
+        <div class="buttons-row">
+            <button class="btn-adicionar" onclick="PesquisarLinkedin()">Pesquisar Linkedin</button>
+            <button class="btn-adicionar" onclick="SiteDaEmpresa()">Site da Empresa</button>
+
+            <button class="btn-adicionar" onclick="formatarEmpresa()">Copiar Empresa</button>
+            <button class="btn-adicionar" onclick="formatarNome()">Copiar Nome</button>
+            <button class="btn-adicionar" onclick="formatarTelefone()">Copiar Telefone</button>
+            <button class="btn-adicionar" onclick="formatarEmail()">Copiar E-mail</button>
+            <button class="btn-adicionar" onclick="formatarAssunto()">Copiar Assunto</button>
+        </div>
+
+        <!-- Container Principal para Informações Automáticas e Adicionais Lado a Lado -->
+        <div class="info-principal">
+            <div class="containerLeadAutomatico">
+                <div id="resultado" class="resultado"></div>
+                <button onclick="copiarTexto()">Copiar Texto</button>
+            </div>
+
+            <!-- Seção para Informações Adicionais -->
+            <div class="info-adicional">
+                <div id="informacoesAdicionais" class="info-div">
+                    <!-- Conteúdo das Informações Adicionais será inserido aqui -->
+                </div>
+                <button onclick="copiarInformacoesAdicionais()">Copiar Informações Econodata</button>
+            </div>
+        </div>
+
+        <!-- Container para Interesse e Origem do Lead -->
+        <div class="info-container-duplo">
+            <div id="interesseLead" class="info-div2"></div>
+            <div id="origemLead" class="info-div2"></div>
+        </div>
+    </div>
+
+    <script src="formatador.js"></script>
+</body>
+
+</html>
